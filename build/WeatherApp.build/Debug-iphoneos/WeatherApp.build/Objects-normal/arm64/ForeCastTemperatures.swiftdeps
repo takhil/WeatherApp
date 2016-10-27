@@ -1,0 +1,100 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ForeCastTemperatures"
+provides-nominal:
+- "C10WeatherApp20ForeCastTemperatures"
+provides-member:
+- ["C10WeatherApp20ForeCastTemperatures", ""]
+provides-dynamic-lookup:
+- "foreCastIcon"
+- "foreCastDay"
+depends-top-level:
+- "String"
+- "ForeCastTemperatures"
+- !private "StringLiteralType"
+- "NSObject"
+- "Int"
+depends-member:
+- ["Ps9AnyObject", "foreCastDay"]
+- ["Ps9AnyObject", "foreCastHighTempInF"]
+- ["Ps9AnyObject", "foreCastIcon"]
+- ["Ps9AnyObject", "foreCastLowTempInF"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "foreCastDay"]
+- ["Ps11CVarArgType", "foreCastHighTempInF"]
+- ["Ps11CVarArgType", "foreCastIcon"]
+- ["Ps11CVarArgType", "foreCastLowTempInF"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "foreCastDay"]
+- ["Ps28CustomDebugStringConvertible", "foreCastHighTempInF"]
+- ["Ps28CustomDebugStringConvertible", "foreCastIcon"]
+- ["Ps28CustomDebugStringConvertible", "foreCastLowTempInF"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "foreCastDay"]
+- ["Ps23CustomStringConvertible", "foreCastHighTempInF"]
+- ["Ps23CustomStringConvertible", "foreCastIcon"]
+- ["Ps23CustomStringConvertible", "foreCastLowTempInF"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "foreCastDay"]
+- ["Ps9Equatable", "foreCastHighTempInF"]
+- ["Ps9Equatable", "foreCastIcon"]
+- ["Ps9Equatable", "foreCastLowTempInF"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", ""]
+- ["C10WeatherApp20ForeCastTemperatures", "Int"]
+- ["C10WeatherApp20ForeCastTemperatures", "String"]
+- ["C10WeatherApp20ForeCastTemperatures", "deinit"]
+- ["C10WeatherApp20ForeCastTemperatures", "foreCastDay"]
+- ["C10WeatherApp20ForeCastTemperatures", "foreCastHighTempInF"]
+- ["C10WeatherApp20ForeCastTemperatures", "foreCastIcon"]
+- ["C10WeatherApp20ForeCastTemperatures", "foreCastLowTempInF"]
+- ["C10WeatherApp20ForeCastTemperatures", "init"]
+- ["Ps8Hashable", "foreCastDay"]
+- ["Ps8Hashable", "foreCastHighTempInF"]
+- ["Ps8Hashable", "foreCastIcon"]
+- ["Ps8Hashable", "foreCastLowTempInF"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", ""]
+- ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "foreCastDay"]
+- ["CSo8NSObject", "foreCastHighTempInF"]
+- ["CSo8NSObject", "foreCastIcon"]
+- ["CSo8NSObject", "foreCastLowTempInF"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", ""]
+- ["PSo16NSObjectProtocol", "foreCastDay"]
+- ["PSo16NSObjectProtocol", "foreCastHighTempInF"]
+- ["PSo16NSObjectProtocol", "foreCastIcon"]
+- ["PSo16NSObjectProtocol", "foreCastLowTempInF"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Vs12StaticString", "deinit"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "C10WeatherApp20ForeCastTemperatures"
+- "Ps8Hashable"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Vs12StaticString"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+interface-hash: "c28c887591b4674d8435fcba6245595f"

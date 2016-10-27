@@ -1,0 +1,129 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CurrentTemperature"
+provides-nominal:
+- "C10WeatherApp18CurrentTemperature"
+provides-member:
+- ["C10WeatherApp18CurrentTemperature", ""]
+provides-dynamic-lookup:
+- "currentIconType"
+- "currentDay"
+- "currentIcon"
+- "currentLocation"
+depends-top-level:
+- "Int"
+- "NSObject"
+- "CurrentTemperature"
+- !private "StringLiteralType"
+- "String"
+depends-member:
+- ["Ps9AnyObject", "currentDay"]
+- ["Ps9AnyObject", "currentDayHighTemp"]
+- ["Ps9AnyObject", "currentDayLowTemp"]
+- ["Ps9AnyObject", "currentIcon"]
+- ["Ps9AnyObject", "currentIconType"]
+- ["Ps9AnyObject", "currentLocation"]
+- ["Ps9AnyObject", "currentTemperatureInF"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "currentDay"]
+- ["Ps11CVarArgType", "currentDayHighTemp"]
+- ["Ps11CVarArgType", "currentDayLowTemp"]
+- ["Ps11CVarArgType", "currentIcon"]
+- ["Ps11CVarArgType", "currentIconType"]
+- ["Ps11CVarArgType", "currentLocation"]
+- ["Ps11CVarArgType", "currentTemperatureInF"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", ""]
+- ["C10WeatherApp18CurrentTemperature", "Int"]
+- ["C10WeatherApp18CurrentTemperature", "String"]
+- ["C10WeatherApp18CurrentTemperature", "currentDay"]
+- ["C10WeatherApp18CurrentTemperature", "currentDayHighTemp"]
+- ["C10WeatherApp18CurrentTemperature", "currentDayLowTemp"]
+- ["C10WeatherApp18CurrentTemperature", "currentIcon"]
+- ["C10WeatherApp18CurrentTemperature", "currentIconType"]
+- ["C10WeatherApp18CurrentTemperature", "currentLocation"]
+- ["C10WeatherApp18CurrentTemperature", "currentTemperatureInF"]
+- ["C10WeatherApp18CurrentTemperature", "deinit"]
+- ["C10WeatherApp18CurrentTemperature", "init"]
+- ["Ps28CustomDebugStringConvertible", "currentDay"]
+- ["Ps28CustomDebugStringConvertible", "currentDayHighTemp"]
+- ["Ps28CustomDebugStringConvertible", "currentDayLowTemp"]
+- ["Ps28CustomDebugStringConvertible", "currentIcon"]
+- ["Ps28CustomDebugStringConvertible", "currentIconType"]
+- ["Ps28CustomDebugStringConvertible", "currentLocation"]
+- ["Ps28CustomDebugStringConvertible", "currentTemperatureInF"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "currentDay"]
+- ["Ps23CustomStringConvertible", "currentDayHighTemp"]
+- ["Ps23CustomStringConvertible", "currentDayLowTemp"]
+- ["Ps23CustomStringConvertible", "currentIcon"]
+- ["Ps23CustomStringConvertible", "currentIconType"]
+- ["Ps23CustomStringConvertible", "currentLocation"]
+- ["Ps23CustomStringConvertible", "currentTemperatureInF"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "currentDay"]
+- ["Ps9Equatable", "currentDayHighTemp"]
+- ["Ps9Equatable", "currentDayLowTemp"]
+- ["Ps9Equatable", "currentIcon"]
+- ["Ps9Equatable", "currentIconType"]
+- ["Ps9Equatable", "currentLocation"]
+- ["Ps9Equatable", "currentTemperatureInF"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "currentDay"]
+- ["Ps8Hashable", "currentDayHighTemp"]
+- ["Ps8Hashable", "currentDayLowTemp"]
+- ["Ps8Hashable", "currentIcon"]
+- ["Ps8Hashable", "currentIconType"]
+- ["Ps8Hashable", "currentLocation"]
+- ["Ps8Hashable", "currentTemperatureInF"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", ""]
+- ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "currentDay"]
+- ["CSo8NSObject", "currentDayHighTemp"]
+- ["CSo8NSObject", "currentDayLowTemp"]
+- ["CSo8NSObject", "currentIcon"]
+- ["CSo8NSObject", "currentIconType"]
+- ["CSo8NSObject", "currentLocation"]
+- ["CSo8NSObject", "currentTemperatureInF"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", ""]
+- ["PSo16NSObjectProtocol", "currentDay"]
+- ["PSo16NSObjectProtocol", "currentDayHighTemp"]
+- ["PSo16NSObjectProtocol", "currentDayLowTemp"]
+- ["PSo16NSObjectProtocol", "currentIcon"]
+- ["PSo16NSObjectProtocol", "currentIconType"]
+- ["PSo16NSObjectProtocol", "currentLocation"]
+- ["PSo16NSObjectProtocol", "currentTemperatureInF"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Vs12StaticString", "deinit"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "C10WeatherApp18CurrentTemperature"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Vs12StaticString"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+interface-hash: "619413d8ec57d07638b454514ce915ea"

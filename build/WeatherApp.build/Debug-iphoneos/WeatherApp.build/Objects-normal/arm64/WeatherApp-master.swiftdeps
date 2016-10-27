@@ -1,0 +1,15 @@
+version: "Apple Swift version 2.3 (swiftlang-800.10.12 clang-800.0.38)"
+options: "fdaf7c553354993e3097be6236390326"
+build_time: [530552382, 967136000]
+inputs:
+  "/Users/akhiltirumalasetty/Desktop/WeatherApp/TemperatureScalesView.swift": [529975865, 0]
+  "/Users/akhiltirumalasetty/Desktop/WeatherApp/Constants.swift": [530422587, 0]
+  "/Users/akhiltirumalasetty/Desktop/WeatherApp/WeatherConnection.swift": [530552382, 0]
+  "/Users/akhiltirumalasetty/Desktop/WeatherApp/CurrentTemperature.swift": [530064053, 0]
+  "/Users/akhiltirumalasetty/Desktop/WeatherApp/HourlyTemperatures.swift": [530076998, 0]
+  "/Users/akhiltirumalasetty/Desktop/WeatherApp/WeatherApp/WeatherView.swift": [530550866, 0]
+  "/Users/akhiltirumalasetty/Desktop/WeatherApp/HourlyTemperatureView.swift": [529975865, 0]
+  "/Users/akhiltirumalasetty/Desktop/WeatherApp/Reachability.swift": [530326247, 0]
+  "/Users/akhiltirumalasetty/Desktop/WeatherApp/WeatherApp/AppDelegate.swift": [530420126, 0]
+  "/Users/akhiltirumalasetty/Desktop/WeatherApp/TenDayForeCastView.swift": [529975865, 0]
+  "/Users/akhiltirumalasetty/Desktop/WeatherApp/ForeCastTemperatures.swift": [530163180, 0]

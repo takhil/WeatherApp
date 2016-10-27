@@ -1,0 +1,178 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Reachability"
+provides-nominal:
+- "C10WeatherApp12Reachability"
+provides-member:
+- ["C10WeatherApp12Reachability", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "Bool"
+- !private "SCNetworkReachabilityFlags"
+- !private "sizeofValue"
+- !private "SCNetworkReachabilityCreateWithAddress"
+- !private "UInt8"
+- !private "kCFAllocatorDefault"
+- !private "!"
+- "Reachability"
+- !private "UnsafePointer"
+- !private "sa_family_t"
+- !private "IntegerLiteralType"
+- !private "AF_INET"
+- !private "=="
+- !private "&&"
+- !private "SCNetworkReachabilityGetFlags"
+- !private "BooleanLiteralType"
+- !private "in_addr"
+- !private "FloatLiteralType"
+- !private "withUnsafePointer"
+- !private "sockaddr_in"
+depends-member:
+- !private ["Ps9AnyObject", "AF_INET"]
+- !private ["Ps9AnyObject", "SCNetworkReachabilityCreateWithAddress"]
+- !private ["Ps9AnyObject", "SCNetworkReachabilityFlags"]
+- !private ["Ps9AnyObject", "SCNetworkReachabilityGetFlags"]
+- !private ["Ps9AnyObject", "UInt8"]
+- !private ["Ps9AnyObject", "UnsafePointer"]
+- !private ["Ps9AnyObject", "in_addr"]
+- !private ["Ps9AnyObject", "kCFAllocatorDefault"]
+- !private ["Ps9AnyObject", "sa_family_t"]
+- !private ["Ps9AnyObject", "sizeofValue"]
+- !private ["Ps9AnyObject", "sockaddr_in"]
+- !private ["Ps9AnyObject", "withUnsafePointer"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps23ArrayLiteralConvertible", "ConnectionRequired"]
+- !private ["Ps23ArrayLiteralConvertible", "RawValue"]
+- !private ["Ps23ArrayLiteralConvertible", "Reachable"]
+- !private ["Ps23ArrayLiteralConvertible", "init"]
+- !private ["Ps22BidirectionalIndexType", "init"]
+- !private ["Ps21BitwiseOperationsType", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "init"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps9Equatable", "ConnectionRequired"]
+- !private ["Ps9Equatable", "RawValue"]
+- !private ["Ps9Equatable", "Reachable"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps16ForwardIndexType", "init"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps21IntegerArithmeticType", "init"]
+- !private ["Ps25IntegerLiteralConvertible", "init"]
+- !private ["Ps11IntegerType", "init"]
+- !private ["Ps21NilLiteralConvertible", "init"]
+- !private ["Ps13OptionSetType", "ConnectionRequired"]
+- !private ["Ps13OptionSetType", "RawValue"]
+- !private ["Ps13OptionSetType", "Reachable"]
+- !private ["Ps13OptionSetType", "init"]
+- !private ["Ps21RandomAccessIndexType", "init"]
+- !private ["Ps16RawRepresentable", "ConnectionRequired"]
+- !private ["Ps16RawRepresentable", "RawValue"]
+- !private ["Ps16RawRepresentable", "Reachable"]
+- !private ["Ps16RawRepresentable", "init"]
+- !private ["C10WeatherApp12Reachability", "AF_INET"]
+- ["C10WeatherApp12Reachability", "Bool"]
+- !private ["C10WeatherApp12Reachability", "SCNetworkReachabilityCreateWithAddress"]
+- !private ["C10WeatherApp12Reachability", "SCNetworkReachabilityFlags"]
+- !private ["C10WeatherApp12Reachability", "SCNetworkReachabilityGetFlags"]
+- !private ["C10WeatherApp12Reachability", "UInt8"]
+- !private ["C10WeatherApp12Reachability", "UnsafePointer"]
+- ["C10WeatherApp12Reachability", "deinit"]
+- !private ["C10WeatherApp12Reachability", "in_addr"]
+- ["C10WeatherApp12Reachability", "init"]
+- ["C10WeatherApp12Reachability", "isConnectedToNetwork"]
+- !private ["C10WeatherApp12Reachability", "kCFAllocatorDefault"]
+- !private ["C10WeatherApp12Reachability", "sa_family_t"]
+- !private ["C10WeatherApp12Reachability", "sizeofValue"]
+- !private ["C10WeatherApp12Reachability", "sockaddr_in"]
+- !private ["C10WeatherApp12Reachability", "withUnsafePointer"]
+- !private ["VSC26SCNetworkReachabilityFlags", "ConnectionRequired"]
+- !private ["VSC26SCNetworkReachabilityFlags", "RawValue"]
+- !private ["VSC26SCNetworkReachabilityFlags", "Reachable"]
+- !private ["VSC26SCNetworkReachabilityFlags", "deinit"]
+- !private ["VSC26SCNetworkReachabilityFlags", "init"]
+- !private ["Ps14SetAlgebraType", "ConnectionRequired"]
+- !private ["Ps14SetAlgebraType", "RawValue"]
+- !private ["Ps14SetAlgebraType", "Reachable"]
+- !private ["Ps14SetAlgebraType", "init"]
+- !private ["Ps10Strideable", "init"]
+- !private ["Vs5UInt8", "init"]
+- !private ["SP", "init"]
+- !private ["Ps19UnsignedIntegerType", "init"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
+- !private ["Ps28_DisallowMixedSignArithmetic", "init"]
+- !private ["Ps14_Incrementable", "init"]
+- !private ["Ps22_IntegerArithmeticType", "init"]
+- !private ["Ps12_IntegerType", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps12_PointerType", "init"]
+- !private ["Ps22_RandomAccessAmbiguity", "init"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps18_StringElementType", "init"]
+- !private ["VSC7in_addr", "init"]
+- !private ["VSC11sockaddr_in", "init"]
+- !private ["VSC11sockaddr_in", "sin_family"]
+- !private ["VSC11sockaddr_in", "sin_len"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "Ps11CVarArgType"
+- !private "Ps10Comparable"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps23CustomStringConvertible"
+- !private "Ps9Equatable"
+- !private "Ps16ForwardIndexType"
+- !private "Ps8Hashable"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps21NilLiteralConvertible"
+- !private "Ps13OptionSetType"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps16RawRepresentable"
+- "C10WeatherApp12Reachability"
+- !private "VSC26SCNetworkReachabilityFlags"
+- !private "Ps14SetAlgebraType"
+- !private "Ps10Strideable"
+- !private "Vs5UInt8"
+- !private "SP"
+- !private "Ps19UnsignedIntegerType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps28_DisallowMixedSignArithmetic"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps12_PointerType"
+- !private "Ps22_RandomAccessAmbiguity"
+- !private "Ps12_Reflectable"
+- !private "Ps18_StringElementType"
+- !private "VSC7in_addr"
+- !private "VSC11sockaddr_in"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+interface-hash: "1c6569fc5f44af07bd978b5e287b91d5"
