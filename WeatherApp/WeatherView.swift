@@ -9,21 +9,28 @@
 import UIKit
 import CoreLocation
 
+
 class WeatherView: UIViewController,UIPopoverPresentationControllerDelegate,CLLocationManagerDelegate {
     
-    var isCelcius:String = ""
+   
+
+    var isCelcius :String = "0"
+    var  dayTemp  :String = ""
+    var  dayHTemp :String = ""
+    var  dayLTemp :String = ""
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var titleText: UILabel!
    
     @IBOutlet weak var spinnerView: UIActivityIndicatorView!
     @IBOutlet weak var currentTemperature: UILabel!
 
+    @IBOutlet weak var todayLabel: UILabel!
     @IBOutlet weak var currentTemperatureImage: UIImageView!
     @IBOutlet weak var currentTemperatureCondition: UILabel!
     @IBOutlet weak var currentDay: UILabel!
     @IBOutlet weak var currentHighTemperature: UILabel!
     @IBOutlet weak var currentLowTemperature: UILabel!
-    
+    @IBOutlet weak var settingButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
  
    let locationManager = CLLocationManager()
@@ -32,43 +39,66 @@ class WeatherView: UIViewController,UIPopoverPresentationControllerDelegate,CLLo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        todayLabel.hidden = true
+        settingButton.hidden = true
         editButton.hidden = true
         spinnerView.startAnimating()
         
          NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.updateCurrentTemp), name: "curretTempNotification", object:nil)
-//        
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.updateTempScales), name: "tempScaleNotification", object:nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.updateTempScales), name: "tempScaleNotification", object:nil)
         
     }
     
-//    func updateTempScales(notify: NSNotification) {
-//        isCelcius = notify.object! as! String
-//        print("NSNOtification Called for scales",isCelcius)
-//       
-//        
-//        
-//    }
-
- 
-    func updateCurrentTemp(notify: NSNotification) {
-        let currTempObj = notify.object! as! CurrentTemperature
+    func updateTempScales(notify: NSNotification) {
+        isCelcius = notify.object! as! String
+        print("NSNOtification Called for scales",isCelcius)
         
-        print("NSNOtification Called in current view",currTempObj)
+        if isCelcius == "0"{
+            
+            currentTemperature?.text = dayTemp
+            currentHighTemperature?.text = dayHTemp
+            currentLowTemperature?.text = dayLTemp
+        
+        }
+        else{
+            
+            currentTemperature?.text    = String((Int(dayTemp)!-32)*5/9) + "°"
+            currentHighTemperature?.text = String((Int(dayHTemp)!-32)*5/9) + "°"
+            currentLowTemperature?.text = String((Int(dayLTemp)!-32)*5/9) + "°"
+
+        }
+
+    }
+    func updateCurrentTemp(notify: NSNotification) {
+      let  currTempObj = notify.object! as! CurrentTemperature
+        
         titleText?.text = currTempObj.currentLocation
-        currentTemperature?.text = String(currTempObj.currentTemperatureInF)
+     
+        currentTemperature?.text = String(currTempObj.currentTemperatureInF) + "°"
+        currentHighTemperature?.text = String(currTempObj.currentDayHighTemp) + "°"
+        currentLowTemperature?.text = String(currTempObj.currentDayLowTemp) + "°"
+     
         currentTemperatureCondition.text = currTempObj.currentIconType
         currentDay?.text = currTempObj.currentDay
-        currentHighTemperature?.text = String(currTempObj.currentDayHighTemp)
-        currentLowTemperature?.text = String(currTempObj.currentDayLowTemp)
-        
         currentTemperatureImage?.image = UIImage(named:currTempObj.currentIcon)!
+        
+        dayTemp = String(currTempObj.currentTemperatureInF)
+        dayHTemp = String(currTempObj.currentDayHighTemp)
+        dayLTemp = String(currTempObj.currentDayLowTemp)
+        
         spinnerView.stopAnimating()
+        todayLabel.hidden = false
         spinnerView.hidden = true
         editButton.hidden = false
+        settingButton.hidden = false
         
         editButton.addTarget(self, action: #selector(self.editAction), forControlEvents: .TouchUpInside)
         
+        settingButton.addTarget(self, action: #selector(self.settigAction), forControlEvents: .TouchUpInside)
+        
     }
+    
+   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -148,14 +178,18 @@ class WeatherView: UIViewController,UIPopoverPresentationControllerDelegate,CLLo
             
             //print("No  Internet connected")
             
-            let alertController = UIAlertController(title: "Error", message: " Error No internet connection", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Error", message: " Error No internet connection", preferredStyle: .ActionSheet)
             
             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction) in
                 print("You've pressed OK button");
             }
             
             alertController.addAction(OKAction)
-            self.presentViewController(alertController, animated: true, completion:nil)
+            self.presentViewController(alertController, animated: true, completion:{
+                alertController.view.superview?.userInteractionEnabled = true
+                alertController.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.closeAlert)))
+            })
+
             
         }
  
@@ -164,6 +198,50 @@ class WeatherView: UIViewController,UIPopoverPresentationControllerDelegate,CLLo
     }
     
     //MARK: - Settings BUtton Action
+
+    
+    
+    
+    func  settigAction(){
+    
+        print("Buton Action Pressed")
+        
+        let alert = UIAlertController(title: "Temperature Scales", message:"", preferredStyle: .ActionSheet)
+    
+        let fahrinHeat = UIAlertAction(title: "Fahrenheit", style: .Default, handler: {(action: UIAlertAction) -> Void in
+            NSNotificationCenter.defaultCenter().postNotificationName("tempScaleNotification", object:"0")
+        })
+   
+        let celcius = UIAlertAction(title: "Celsius", style: .Default, handler: {(action: UIAlertAction) -> Void in
+            
+            NSNotificationCenter.defaultCenter().postNotificationName("tempScaleNotification", object:"1")
+        })
+        let cancel = UIAlertAction(title: "cancel", style: .Default, handler: {(action: UIAlertAction) -> Void in
+        })
+ 
+
+        alert.addAction(fahrinHeat)
+        alert.addAction(celcius)
+        alert.addAction(cancel)
+
+        self.presentViewController(alert, animated: true, completion:{
+            alert.view.superview?.userInteractionEnabled = true
+            alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.closeAlert)))
+        })
+
+
+        
+    }
+    
+    
+    
+    
+    
+//    @IBAction func settingsButton(sender: AnyObject) {
+//        
+//        print("Settings printed")
+//    }
+    
     //MARK: - Segue for POP Over Controller
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -196,8 +274,29 @@ class WeatherView: UIViewController,UIPopoverPresentationControllerDelegate,CLLo
         title: "Ok", style: UIAlertActionStyle.Default) {
             (action) -> Void in
             
-            if let zipcode = zipCodeTextField?.text {
-                print(" ZipCode = \(zipcode)")
+            if let zipCode = zipCodeTextField?.text {
+                print(" ZipCode = \(zipCode)")
+                
+                
+                let geocoder = CLGeocoder()
+                geocoder.geocodeAddressString(zipCode) {
+                    (placemarks, error) -> Void in
+                    // Placemarks is an optional array of CLPlacemarks, first item in array is best guess of Address
+                    
+                    if let placemark = placemarks?[0] {
+                        
+//                        print("GET administrativeArea ",placemark.administrativeArea)
+//                        
+//                        print("GET locality ",placemark.locality)
+//                        print("Get Country",placemark.country)
+                        
+              WeatherConnection.getTemperatures(zipCode,state:placemark.administrativeArea!,country:placemark.country!,locality:placemark.locality!)
+                     
+                    }
+                    
+                }
+                
+                
             } else {
                 print("No ZipCode entered")
             }
@@ -213,10 +312,15 @@ class WeatherView: UIViewController,UIPopoverPresentationControllerDelegate,CLLo
         }
         
         alertController.addAction(loginAction)
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.presentViewController(alertController, animated: true, completion:{
+            alertController.view.superview?.userInteractionEnabled = true
+            alertController.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.closeAlert)))
+        })
     }
    //Edit Action End
-    
+    func closeAlert(gesture: UITapGestureRecognizer) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     
     

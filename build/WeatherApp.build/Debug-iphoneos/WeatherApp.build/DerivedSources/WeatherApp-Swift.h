@@ -143,6 +143,8 @@ SWIFT_CLASS("_TtC10WeatherApp20ForeCastTemperatures")
 @end
 
 @class UICollectionView;
+@class HourlyTemperatures;
+@class NSNotification;
 @class NSIndexPath;
 @class UICollectionViewCell;
 @class UICollectionViewLayout;
@@ -151,7 +153,13 @@ SWIFT_CLASS("_TtC10WeatherApp20ForeCastTemperatures")
 
 SWIFT_CLASS("_TtC10WeatherApp21HourlyTemperatureView")
 @interface HourlyTemperatureView : UICollectionViewController
+@property (nonatomic, strong) IBOutlet UICollectionView * _Null_unspecified myCollectionView;
+@property (nonatomic, copy) NSString * _Null_unspecified isCelsius;
+@property (nonatomic, copy) NSArray<HourlyTemperatures *> * _Nonnull hourTemps;
 - (void)viewDidLoad;
+- (void)updateTempScales:(NSNotification * _Nonnull)notify;
+- (BOOL)collectionView:(UICollectionView * _Nonnull)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)updateHourlyTemp:(NSNotification * _Nonnull)notify;
 - (void)didReceiveMemoryWarning;
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView * _Nonnull)collectionView;
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section;
@@ -171,9 +179,12 @@ SWIFT_CLASS("_TtC10WeatherApp18HourlyTemperatures")
 - (nonnull instancetype)initWithHourlyTemperatureInF:(NSInteger)hourlyTemperatureInF hourlyTime:(NSString * _Nonnull)hourlyTime hourlyIcon:(NSString * _Nonnull)hourlyIcon hourlyAmPm:(NSString * _Nonnull)hourlyAmPm OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UISegmentedControl;
 
 SWIFT_CLASS("_TtC10WeatherApp21TemperatureScalesView")
 @interface TemperatureScalesView : UIViewController
+@property (nonatomic, copy) NSString * _Null_unspecified isCelcius;
+- (IBAction)segmentAction:(UISegmentedControl * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -185,8 +196,11 @@ SWIFT_CLASS("_TtC10WeatherApp21TemperatureScalesView")
 
 SWIFT_CLASS("_TtC10WeatherApp18TenDayForeCastView")
 @interface TenDayForeCastView : UITableViewController
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull array;
+@property (nonatomic, copy) NSArray<ForeCastTemperatures *> * _Nonnull foreCastTemps;
+@property (nonatomic, copy) NSString * _Null_unspecified isCelsius;
 - (void)viewDidLoad;
+- (void)updateforeCastTemp:(NSNotification * _Nonnull)notify;
+- (void)updateTempScales:(NSNotification * _Nonnull)notify;
 - (void)didReceiveMemoryWarning;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
@@ -209,34 +223,46 @@ SWIFT_CLASS("_TtC10WeatherApp17WeatherConnection")
 @class NSError;
 @class UIStoryboardSegue;
 @class UIPresentationController;
+@class UITapGestureRecognizer;
 @class UIScrollView;
 @class UILabel;
+@class UIActivityIndicatorView;
 @class UIImageView;
+@class UIButton;
 
 SWIFT_CLASS("_TtC10WeatherApp11WeatherView")
 @interface WeatherView : UIViewController <UIAdaptivePresentationControllerDelegate, CLLocationManagerDelegate, UIPopoverPresentationControllerDelegate>
+@property (nonatomic, copy) NSString * _Nonnull isCelcius;
+@property (nonatomic, copy) NSString * _Nonnull dayTemp;
+@property (nonatomic, copy) NSString * _Nonnull dayHTemp;
+@property (nonatomic, copy) NSString * _Nonnull dayLTemp;
 @property (nonatomic, weak) IBOutlet UIScrollView * _Null_unspecified scrollView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titleText;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified spinnerView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentTemperature;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified todayLabel;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified currentTemperatureImage;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentTemperatureCondition;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentDay;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentHighTemperature;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentLowTemperature;
-@property (nonatomic, weak) IBOutlet UIScrollView * _Null_unspecified hourlyScrollView;
-@property (nonatomic, weak) IBOutlet UIScrollView * _Null_unspecified tenDayScrollView;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified settingButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified editButton;
 @property (nonatomic, readonly, strong) CLLocationManager * _Nonnull locationManager;
 - (void)viewDidLoad;
+- (void)updateTempScales:(NSNotification * _Nonnull)notify;
+- (void)updateCurrentTemp:(NSNotification * _Nonnull)notify;
 - (void)didReceiveMemoryWarning;
 - (void)getLocation;
 - (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateToLocation:(CLLocation * _Nonnull)newLocation fromLocation:(CLLocation * _Nonnull)oldLocation;
 - (void)displayLocationInfo:(CLPlacemark * _Nullable)placemark;
 - (void)locationManager:(CLLocationManager * _Nonnull)manager didFailWithError:(NSError * _Nonnull)error;
 - (void)viewDidAppear:(BOOL)animated;
-- (IBAction)settingsButton:(id _Nonnull)sender;
+- (void)settigAction;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController * _Nonnull)controller;
-- (IBAction)editButton:(id _Nonnull)sender;
+- (void)editAction;
+- (void)closeAlert:(UITapGestureRecognizer * _Nonnull)gesture;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

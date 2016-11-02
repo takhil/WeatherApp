@@ -12,30 +12,35 @@ class TemperatureScalesView: UIViewController {
     
     var isCelcius:String!
     
-    @IBOutlet weak var tempScaleControl: UISegmentedControl!
-    
-    @IBAction func tempScaleButton(sender: UISegmentedControl) {
 
-        switch sender.selectedSegmentIndex
-        {
-        case 0:
-            isCelcius = "0"
-        case 1:
-            isCelcius = "1"
-    
-        default:
-            
-            break; 
-        }
-        NSNotificationCenter.defaultCenter().postNotificationName("tempScaleNotification", object:isCelcius)
+
+    @IBAction func segmentAction(sender: UISegmentedControl) {
         
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        let segmentedControl = (sender )
+        let selectedSegment = segmentedControl.selectedSegmentIndex
+        if selectedSegment == 0 {
+            //toggle the correct view to be visible
+           isCelcius = "0"
+        }
+        else {
+            //toggle the correct view to be visible
+            isCelcius = "1"
+                    }
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("tempScaleNotification", object:isCelcius)
+
         
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

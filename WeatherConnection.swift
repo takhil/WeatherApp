@@ -12,7 +12,6 @@ import Foundation
 
 class WeatherConnection: NSObject {
     
-
     //Empty dictionary to store the value of objects to show in UI 
     
     //var temperaturesDict = [AnyObject]()
@@ -22,30 +21,27 @@ class WeatherConnection: NSObject {
     
     class func getTemperatures(zipCode:String,state:String,country:String,locality:String){
         
-//        temperaturesDict["Hello"] = "HelloWorld"
-//        print("Dict: Value:::\(temperaturesDict["Hello"])")
-//
-//        print("temperaturesDict::\(temperaturesDict(valueForKey:"hello"))")
-
-        //print("Dict::\(temperaturesDict["Hello"])")
-        
-        //temperaturesDict(setValue("HelloWorld", forKey: "Hello"))
-        
       
-//        print("The Location info is::",zipCode)
-//        print("The Location info is::",state)
-//        print("The Location info is::",country)
-//        print("The Location info is::",locality)
+        print("The Location info is::",zipCode)
+        print("The Location info is::",state)
+        print("The Location info is::",country)
+        print("The Location info is::",locality)
         
-
+        
         //MARK: - Cuurent Locatin Temperature and Conditions 
         
-        let currentTempUrl:String = "https://api.myjson.com/bins/4knis"
-        let url = NSURL(string: currentTempUrl)
+     // let currentTempUrl:String = "https://api.myjson.com/bins/4knis"
+        
+        let currentTempUrl:String = "http://api.wunderground.com/api/84463b41774b4b88/conditions/q/" + state + "/" + locality + ".json"
+        
+        print("currentTempUrl",currentTempUrl)
+        let url = NSURL(string: currentTempUrl)!
+        
+        
    
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler:{(data, response, error) -> Void in
+     let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler:{(data, response, error) -> Void in
             
-
+        
             if(error == nil){
                 
                 do {
@@ -110,11 +106,13 @@ class WeatherConnection: NSObject {
         
         var hourTemperatureArray = [HourlyTemperatures]()
   
-        let hourlyTempUrl:String = "https://api.myjson.com/bins/stv0"
+       // let hourlyTempUrl:String = "https://api.myjson.com/bins/2eesa"
         
-        let hourlyTempurl = NSURL(string: hourlyTempUrl)
+       let hourlyTempUrl:String = (hourTemp as String) + state + "/" + locality + ".json"
         
-        let hourlyTask = NSURLSession.sharedSession().dataTaskWithURL(hourlyTempurl!, completionHandler:{(hourlyData, response1, hourlyerror) -> Void in
+        let hourlyTempurl = NSURL(string: hourlyTempUrl)!
+        
+        let hourlyTask = NSURLSession.sharedSession().dataTaskWithURL(hourlyTempurl, completionHandler:{(hourlyData, response1, hourlyerror) -> Void in
      
             
             if(hourlyerror == nil){
@@ -129,7 +127,7 @@ class WeatherConnection: NSObject {
                     
                     
                     
-                    let hourly_forecastDict = hourlyTempDict?.objectForKey("hourly_forecast") as! [AnyObject]?
+                    let hourly_forecastDict = hourlyTempDict?.objectForKey("hourly_forecast") as! [AnyObject]!
                     
                     
                     
@@ -137,7 +135,7 @@ class WeatherConnection: NSObject {
                     
                     
                     
-                    for i in hourly_forecastDict!{
+                    for i in hourly_forecastDict{
    
                         let hourlyTemperatureInF = Int(i["temp"]!!["english"] as! String)
                         
@@ -177,9 +175,11 @@ class WeatherConnection: NSObject {
         //fore Cast temp servie call
         
         var foreCastTempArray = [ForeCastTemperatures]()
-        
-        let foreCastTempUrl:String = "https://api.myjson.com/bins/2ep70"
+//        
+        //let foreCastTempUrl:String = "https://api.myjson.com/bins/2gjy2"
      
+         let foreCastTempUrl:String = (tenDayTemp as String) + state + "/" + locality + ".json"
+        
         let foreCasturl = NSURL(string: foreCastTempUrl)
 
         let foreCasttask = NSURLSession.sharedSession().dataTaskWithURL(foreCasturl!, completionHandler:{(forecastdata, response2, error2) -> Void in
@@ -188,7 +188,7 @@ class WeatherConnection: NSObject {
                 
                 do {
                     
-                    let foreCastTempDict = try NSJSONSerialization.JSONObjectWithData(forecastdata!, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary
+                    let foreCastTempDict = try NSJSONSerialization.JSONObjectWithData(forecastdata!, options: NSJSONReadingOptions.MutableContainers) as?NSDictionary
                     
                     
                     
@@ -196,7 +196,7 @@ class WeatherConnection: NSObject {
                     
                     
                     
-                    let forecast = foreCastTempDict?.objectForKey("forecast")!["simpleforecast"]!!["forecastday"] as! [AnyObject]?
+                    let forecast = foreCastTempDict!.objectForKey("forecast")?["simpleforecast"]!!["forecastday"] as! [AnyObject]!
                     
                     
                     
@@ -204,7 +204,7 @@ class WeatherConnection: NSObject {
                     
                     
                     
-                    for i in forecast!{
+                    for i in forecast{
         
                         let foreCastDay                   = i["date"]!!["weekday"] as! String
                         

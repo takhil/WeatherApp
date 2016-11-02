@@ -12,7 +12,7 @@ private let reuseIdentifier = "hourlyForecast"
 
 
 
-class HourlyTemperatureView: UICollectionViewController {
+class HourlyTemperatureView: UICollectionViewController{
 
     @IBOutlet var myCollectionView: UICollectionView!
     
@@ -40,19 +40,19 @@ class HourlyTemperatureView: UICollectionViewController {
     }
     func updateTempScales(notify: NSNotification) {
         isCelsius = notify.object! as! String
-        print("NSNOtification Called for scales",isCelsius)
-        print("NSNOtification Segment in hours",hourTemps)
-
         myCollectionView!.reloadData()
         
         
     }
-    
+  
+     internal override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool{
+        
+        return false
+    }
     func updateHourlyTemp(notify: NSNotification) {
 
         hourTemps = notify.object! as! [HourlyTemperatures]
-        
-        print("NSNOtification Called in hours",hourTemps)
+      
         myCollectionView!.reloadData()
         
     }
@@ -93,26 +93,30 @@ class HourlyTemperatureView: UICollectionViewController {
         
         // Configure the cell
         let timeLabel : UILabel? = cell.contentView.viewWithTag(10) as? UILabel
-        timeLabel?.textColor = UIColor.init(red: 138.0, green: 180.0, blue: 174.0, alpha:1)
+//        timeLabel?.textColor = UIColor.init(red: 138.0, green: 180.0, blue: 174.0, alpha:1)
         timeLabel?.text = hourDict.hourlyTime
         let templabel : UILabel? = cell.contentView.viewWithTag(20) as? UILabel
         if(isCelsius == "1"){
            
-            templabel?.text = String((hourDict.hourlyTemperatureInF - 32)*5/9)
+            templabel?.text = String((hourDict.hourlyTemperatureInF - 32)*5/9) + "°"
         }
         else{
             
-             templabel?.text = String(hourDict.hourlyTemperatureInF)
+             templabel?.text = String(hourDict.hourlyTemperatureInF) + "°"
         }
         
 
         let hourlyImage : UIImageView? = cell.contentView.viewWithTag(30) as? UIImageView
+   
         hourlyImage!.image! = UIImage(named:hourDict.hourlyIcon)!
-        cell.backgroundColor = UIColor .clearColor()
+
+    
         return cell
         
         
     }
+    
+    
     
     
     // MARK: UICollectionViewDelegate
@@ -145,5 +149,6 @@ class HourlyTemperatureView: UICollectionViewController {
     
     }
     */
-
 }
+
+

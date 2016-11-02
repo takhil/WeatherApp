@@ -11,6 +11,8 @@ import UIKit
 class TenDayForeCastView: UITableViewController {
     
     var foreCastTemps = [ForeCastTemperatures]()
+    var isCelsius:String! = "0"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +26,8 @@ class TenDayForeCastView: UITableViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.updateforeCastTemp), name: "forecastTempNotification", object:nil)
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.updateTempScales), name: "tempScaleNotification", object:nil)
+        
     }
     
     func updateforeCastTemp(notify: NSNotification) {
@@ -33,6 +37,12 @@ class TenDayForeCastView: UITableViewController {
         print("NSNOtification Called in hours",foreCastTemps)
         self.tableView!.reloadData()
 
+        
+    }
+    func updateTempScales(notify: NSNotification) {
+        isCelsius = notify.object! as! String
+        self.tableView!.reloadData()
+        
         
     }
 
@@ -64,16 +74,24 @@ class TenDayForeCastView: UITableViewController {
         
         daylabel?.text = foreDict.foreCastDay
        // label?.textColor = UIColor .yellowColor()
+        
+        
         let tempHlabel : UILabel? = cell.contentView.viewWithTag(60) as? UILabel
-        
-        
-        tempHlabel?.text = String(foreDict.foreCastHighTempInF)
-        
         let tempLlabel : UILabel? = cell.contentView.viewWithTag(70) as? UILabel
         
-        
-        tempLlabel?.text = String(foreDict.foreCastLowTempInF)
-        
+        if isCelsius == "1" {
+            
+        tempHlabel?.text = String((foreDict.foreCastHighTempInF - 32)*5/9)
+            
+        tempLlabel?.text = String((foreDict.foreCastLowTempInF - 32)*5/9)
+            
+        }
+        else{
+            tempHlabel?.text = String(foreDict.foreCastHighTempInF)
+            
+            tempLlabel?.text = String(foreDict.foreCastLowTempInF ) 
+        }
+    
         let foreCastImage : UIImageView? = cell.contentView.viewWithTag(50) as? UIImageView
         foreCastImage!.image! = UIImage(named:foreDict.foreCastIcon)!
         cell.backgroundColor = UIColor .clearColor()

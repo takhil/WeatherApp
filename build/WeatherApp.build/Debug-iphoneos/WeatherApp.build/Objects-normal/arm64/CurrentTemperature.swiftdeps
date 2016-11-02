@@ -8,14 +8,14 @@ provides-member:
 provides-dynamic-lookup:
 - "currentIconType"
 - "currentDay"
-- "currentIcon"
 - "currentLocation"
+- "currentIcon"
 depends-top-level:
-- "Int"
-- "NSObject"
-- "CurrentTemperature"
-- !private "StringLiteralType"
 - "String"
+- "CurrentTemperature"
+- "Int"
+- !private "StringLiteralType"
+- "NSObject"
 depends-member:
 - ["Ps9AnyObject", "currentDay"]
 - ["Ps9AnyObject", "currentDayHighTemp"]

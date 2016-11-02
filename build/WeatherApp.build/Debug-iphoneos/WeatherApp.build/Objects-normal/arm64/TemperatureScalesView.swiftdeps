@@ -6,106 +6,250 @@ provides-nominal:
 provides-member:
 - ["C10WeatherApp21TemperatureScalesView", ""]
 provides-dynamic-lookup:
+- "segmentAction"
+- "isCelcius"
 - "didReceiveMemoryWarning"
 - "viewDidLoad"
 depends-top-level:
-- "TemperatureScalesView"
+- !private "NSNotificationCenter"
+- "String"
+- !private "StringLiteralType"
 - "UIViewController"
+- !private "UnicodeScalarType"
+- "TemperatureScalesView"
+- !private "=="
+- "UISegmentedControl"
 depends-member:
+- !private ["Ps9AnyObject", "NSNotificationCenter"]
+- !private ["Ps9AnyObject", "defaultCenter"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "isCelcius"]
+- !private ["Ps9AnyObject", "postNotificationName"]
+- ["Ps9AnyObject", "segmentAction"]
+- !private ["Ps9AnyObject", "selectedSegmentIndex"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["PSo15CALayerDelegate", "selectedSegmentIndex"]
+- !private ["Ps11CVarArgType", "NSNotificationCenter"]
+- !private ["Ps11CVarArgType", "defaultCenter"]
 - ["Ps11CVarArgType", "didReceiveMemoryWarning"]
 - ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "isCelcius"]
+- !private ["Ps11CVarArgType", "postNotificationName"]
+- ["Ps11CVarArgType", "segmentAction"]
+- !private ["Ps11CVarArgType", "selectedSegmentIndex"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", ""]
+- !private ["Ps28CustomDebugStringConvertible", "NSNotificationCenter"]
+- !private ["Ps28CustomDebugStringConvertible", "defaultCenter"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "isCelcius"]
+- !private ["Ps28CustomDebugStringConvertible", "postNotificationName"]
+- ["Ps28CustomDebugStringConvertible", "segmentAction"]
+- !private ["Ps28CustomDebugStringConvertible", "selectedSegmentIndex"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "NSNotificationCenter"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "defaultCenter"]
 - ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "isCelcius"]
+- !private ["Ps23CustomStringConvertible", "postNotificationName"]
+- ["Ps23CustomStringConvertible", "segmentAction"]
+- !private ["Ps23CustomStringConvertible", "selectedSegmentIndex"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "NSNotificationCenter"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "defaultCenter"]
 - ["Ps9Equatable", "didReceiveMemoryWarning"]
 - ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "isCelcius"]
+- !private ["Ps9Equatable", "postNotificationName"]
+- ["Ps9Equatable", "segmentAction"]
+- !private ["Ps9Equatable", "selectedSegmentIndex"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
+- !private ["Ps8Hashable", "NSNotificationCenter"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "defaultCenter"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
 - ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "isCelcius"]
+- !private ["Ps8Hashable", "postNotificationName"]
+- ["Ps8Hashable", "segmentAction"]
+- !private ["Ps8Hashable", "selectedSegmentIndex"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
+- !private ["SQ", "deinit"]
+- !private ["PSo8NSCoding", "NSNotificationCenter"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "isCelcius"]
+- ["PSo8NSCoding", "segmentAction"]
+- !private ["PSo8NSCoding", "selectedSegmentIndex"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
+- !private ["PSo26NSExtensionRequestHandling", "NSNotificationCenter"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "isCelcius"]
+- ["PSo26NSExtensionRequestHandling", "segmentAction"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
+- !private ["CSo20NSNotificationCenter", "defaultCenter"]
+- !private ["CSo20NSNotificationCenter", "postNotificationName"]
+- !private ["CSo8NSObject", "NSNotificationCenter"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UISegmentedControl"]
+- !private ["CSo8NSObject", "defaultCenter"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "isCelcius"]
+- !private ["CSo8NSObject", "postNotificationName"]
+- ["CSo8NSObject", "segmentAction"]
+- !private ["CSo8NSObject", "selectedSegmentIndex"]
 - ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "NSNotificationCenter"]
+- !private ["PSo16NSObjectProtocol", "defaultCenter"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "isCelcius"]
+- !private ["PSo16NSObjectProtocol", "postNotificationName"]
+- ["PSo16NSObjectProtocol", "segmentAction"]
+- !private ["PSo16NSObjectProtocol", "selectedSegmentIndex"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["SS", "deinit"]
+- !private ["C10WeatherApp21TemperatureScalesView", "NSNotificationCenter"]
+- ["C10WeatherApp21TemperatureScalesView", "String"]
+- ["C10WeatherApp21TemperatureScalesView", "UISegmentedControl"]
 - ["C10WeatherApp21TemperatureScalesView", "deinit"]
 - ["C10WeatherApp21TemperatureScalesView", "didReceiveMemoryWarning"]
 - ["C10WeatherApp21TemperatureScalesView", "init"]
+- ["C10WeatherApp21TemperatureScalesView", "isCelcius"]
+- ["C10WeatherApp21TemperatureScalesView", "segmentAction"]
 - ["C10WeatherApp21TemperatureScalesView", "viewDidLoad"]
+- !private ["PSo29UIAccessibilityIdentification", "selectedSegmentIndex"]
+- !private ["PSo12UIAppearance", "selectedSegmentIndex"]
+- !private ["PSo21UIAppearanceContainer", "NSNotificationCenter"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "isCelcius"]
+- ["PSo21UIAppearanceContainer", "segmentAction"]
+- !private ["PSo21UIAppearanceContainer", "selectedSegmentIndex"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "NSNotificationCenter"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "isCelcius"]
+- ["PSo18UIContentContainer", "segmentAction"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
+- !private ["CSo9UIControl", "selectedSegmentIndex"]
+- !private ["PSo17UICoordinateSpace", "selectedSegmentIndex"]
+- !private ["PSo13UIDynamicItem", "selectedSegmentIndex"]
+- !private ["PSo18UIFocusEnvironment", "NSNotificationCenter"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "isCelcius"]
+- ["PSo18UIFocusEnvironment", "segmentAction"]
+- !private ["PSo18UIFocusEnvironment", "selectedSegmentIndex"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "selectedSegmentIndex"]
+- !private ["CSo11UIResponder", "NSNotificationCenter"]
+- ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "UISegmentedControl"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "isCelcius"]
+- ["CSo11UIResponder", "segmentAction"]
+- !private ["CSo11UIResponder", "selectedSegmentIndex"]
 - ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "NSNotificationCenter"]
 - ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
 - ["PSo30UIResponderStandardEditActions", "init"]
+- ["PSo30UIResponderStandardEditActions", "isCelcius"]
+- ["PSo30UIResponderStandardEditActions", "segmentAction"]
+- !private ["PSo30UIResponderStandardEditActions", "selectedSegmentIndex"]
 - ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", ""]
+- !private ["CSo18UISegmentedControl", "selectedSegmentIndex"]
+- !private ["PSo16UIStateRestoring", "NSNotificationCenter"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "isCelcius"]
+- ["PSo16UIStateRestoring", "segmentAction"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "NSNotificationCenter"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "isCelcius"]
+- ["PSo18UITraitEnvironment", "segmentAction"]
+- !private ["PSo18UITraitEnvironment", "selectedSegmentIndex"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "selectedSegmentIndex"]
+- !private ["CSo16UIViewController", "NSNotificationCenter"]
+- ["CSo16UIViewController", "String"]
+- ["CSo16UIViewController", "UISegmentedControl"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "isCelcius"]
+- ["CSo16UIViewController", "segmentAction"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "selectedSegmentIndex"]
 depends-nominal:
 - "Ps9AnyObject"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "PSo15CALayerDelegate"
 - "Ps11CVarArgType"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
 - "Ps8Hashable"
+- !private "SQ"
 - "PSo8NSCoding"
 - "PSo26NSExtensionRequestHandling"
+- !private "CSo20NSNotificationCenter"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
+- !private "SS"
 - "C10WeatherApp21TemperatureScalesView"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
 - "PSo18UIContentContainer"
+- !private "CSo9UIControl"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
+- !private "CSo18UISegmentedControl"
 - "PSo16UIStateRestoring"
 - "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
 - "CSo16UIViewController"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps12_Reflectable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
@@ -118,4 +262,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "7ea889a5742f56ec8a845d7774d5e518"
+interface-hash: "d19fcf8b43f6fb80cc5d9134a9289a61"

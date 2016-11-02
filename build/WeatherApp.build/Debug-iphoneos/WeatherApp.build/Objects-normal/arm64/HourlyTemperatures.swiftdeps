@@ -6,17 +6,16 @@ provides-nominal:
 provides-member:
 - ["C10WeatherApp18HourlyTemperatures", ""]
 provides-dynamic-lookup:
-- "hourlyIcon"
-- "hourlyTime"
 - "hourlyAmPm"
+- "hourlyTime"
+- "hourlyIcon"
 - "displayHour"
 depends-top-level:
-- "NSObject"
-- "HourlyTemperatures"
-- "String"
 - !private "StringLiteralType"
-- !private "+"
+- "String"
+- "NSObject"
 - "Int"
+- "HourlyTemperatures"
 depends-member:
 - ["Ps9AnyObject", "displayHour"]
 - ["Ps9AnyObject", "hourlyAmPm"]

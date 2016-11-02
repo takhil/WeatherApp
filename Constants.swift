@@ -9,3 +9,9 @@
 import Foundation
 
 let baseURL:NSString = "http://api.wunderground.com/api/84463b41774b4b88/"
+
+let currCondition:NSString = "http://api.wunderground.com/api/84463b41774b4b88/conditions/q/"
+
+let hourTemp:NSString = "http://api.wunderground.com/api/84463b41774b4b88/hourly/q/"
+
+let tenDayTemp:NSString = "http://api.wunderground.com/api/84463b41774b4b88/forecast10day/q/"

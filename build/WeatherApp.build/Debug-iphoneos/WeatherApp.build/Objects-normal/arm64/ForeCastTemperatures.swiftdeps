@@ -6,14 +6,14 @@ provides-nominal:
 provides-member:
 - ["C10WeatherApp20ForeCastTemperatures", ""]
 provides-dynamic-lookup:
-- "foreCastIcon"
 - "foreCastDay"
+- "foreCastIcon"
 depends-top-level:
-- "String"
-- "ForeCastTemperatures"
-- !private "StringLiteralType"
-- "NSObject"
 - "Int"
+- "ForeCastTemperatures"
+- "NSObject"
+- !private "StringLiteralType"
+- "String"
 depends-member:
 - ["Ps9AnyObject", "foreCastDay"]
 - ["Ps9AnyObject", "foreCastHighTempInF"]

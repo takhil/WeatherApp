@@ -1,13 +1,19 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
 - "baseURL"
+- "currCondition"
+- "hourTemp"
+- "tenDayTemp"
 provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
-- "NSString"
 - "StringLiteralType"
+- "hourTemp"
+- "currCondition"
 - "baseURL"
+- "tenDayTemp"
+- "NSString"
 depends-member:
 - ["CSo8NSString", "deinit"]
 depends-nominal:
@@ -24,4 +30,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "2007a5a59321129afefb986adb57b0c9"
+interface-hash: "f003b1a25f1f4b695541fcc8cb602578"
